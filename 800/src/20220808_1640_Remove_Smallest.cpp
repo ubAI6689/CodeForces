@@ -36,7 +36,7 @@ int main()
 
 		int check = 1;
 		for (int k = 1; k < m; k++)
-		{
+		{ 
 			if (element[k]-element[k-1] > 1) {check = 0; break;}
 		}
 		if (check) cout << "YES\n";
