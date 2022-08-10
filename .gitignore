@@ -1,0 +1,8 @@
+# ignore 800/bin folder
+800/bin
+
+# ignore Run folder
+Run
+
+# ignore bash script folder
+Bash_script
