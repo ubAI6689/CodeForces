@@ -4,6 +4,6 @@ printf "/*\n$1\n\nURL:\nQuestion:\n*/\n#include <iostream>\n#include <bits/stdc+
 printf "\n\nint main()\n{\n\treturn 0;\n}\n" >> $fn
 code "$fn"
 
-fn1="/home/$USER/CodeForces/Run/$1.sh"
-printf "#!/bin/bash\ng++ -o /home/$USER/CodeForces/800/bin/$1 /home/$USER/CodeForces/800/src/$fn\n" >> $fn1
+fn1="/home/$USER/CodeForces/Compile/$1.sh"
+printf "#!/bin/bash\ng++ -o /home/$USER/CodeForces/800/bin/$1 $fn" >> $fn1
 chmod u+x $fn1
