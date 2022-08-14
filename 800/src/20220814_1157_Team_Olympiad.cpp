@@ -12,7 +12,7 @@ int main()
 {   
 	int n; cin >> n;
 	map<int, int> child;
-	for (int i = 1, x; i <=s && cin >> x; i++) child[i] = x; 
+	for (int i = 1, x; i <= n && cin >> x; i++) child[i] = x; 
 	
 	vector<int> one; vector<int> two; vector<int> three;
 	for (auto skill :child)
