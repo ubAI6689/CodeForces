@@ -25,16 +25,13 @@ int main()
 	vector<int> num_skill{ one.size(), two.size(), three.size() };
 	sort(num_skill.begin(), num_skill.end());
 
-	if (num_skill == 0) cout << 0 << endl;
+	if (num_skill[0] == 0) cout << 0 << endl;
 	else 
 	{
 		cout << num_skill[0];
 		for (int i = 0; i < num_skill[0]; i++)
-		{
-			for (int j = 0; j < 3; j++)
-			{
-				cout << one[i] << ' ' << two[i] << ' ' << three[i] << endl;
-			}
+		{	
+			cout << one[i] << ' ' << two[i] << ' ' << three[i] << endl;
 		}
 	}
 	return 0;
