@@ -11,9 +11,9 @@ int main()
         ll unit = price / 3;
         
         ll balance = price - (unit + unit*2);
-             if (balance == 0)     cout << unit << ' ' << unit << endl;
-        else if (balance % 2 == 0) cout << unit << ' ' << unit + 1 << endl;
-        else if (balance % 2 == 1) cout << unit + 1 << ' ' << unit << endl;
+             if (balance == 0) cout << unit << ' ' << unit << endl;
+        else if (balance == 1) cout << unit + 1 << ' ' << unit << endl;
+        else if (balance == 2) cout << unit << ' ' << unit + 1 << endl;
     }
     return 0;
 }
