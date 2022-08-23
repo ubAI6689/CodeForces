@@ -6,7 +6,6 @@ int main()
 {
     int b, k;
     cin >> b >> k;
-
     int x; int odd = 0;
     for (int i = 1; i <= k; i++)
     {
