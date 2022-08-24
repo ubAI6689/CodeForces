@@ -1,6 +1,5 @@
 //https://codeforces.com/problemset/problem/1110/A
 #include <iostream>
-#include <cmath>
 using namespace std;
 int main()
 {
