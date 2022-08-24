@@ -20,8 +20,8 @@ int main()
         for (int j = 0; j < n; j++)
         {
             if (tiles[i][j] == '.' )
-            {
-                if (j == 0 || j == n - 1) {cout << "NO\n"; return 0;}
+            {   
+                if (j == 0 || j == n - 1 || i == n - 1 || i == n - 2) {cout << "NO\n"; return 0;}
                 else if (tiles[i+1][j-1] == '.' && tiles[i+1][j] == '.' && tiles[i+1][j+1] == '.' && tiles[i+2][j] == '.')
                 {   
                     tiles[i][j] = hash;
