@@ -18,10 +18,7 @@ int main()
     for (auto it:left)
     {
         int sub_count=0;
-        for (int i=0; i<n; i++) 
-        {
-            if (array[i]==it) sub_count++;
-        }
+        for (int i=0; i<n; i++) {if (array[i]==it) sub_count++;}
         if (count<sub_count) count=sub_count;
     }
     count%k == 0 ? std::cout<<count*left.size()-n : std::cout<<(count+k-count%k)*left.size()-n;
