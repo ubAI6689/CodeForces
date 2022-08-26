@@ -1,4 +1,5 @@
 // https://codeforces.com/problemset/problem/1089/L
+// this code works except it exceeding time limit. will revisit. maybe.
 #include <iostream>
 #include <vector>
 #include <algorithm>
