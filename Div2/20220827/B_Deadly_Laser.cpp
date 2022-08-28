@@ -44,10 +44,10 @@ int main()
         int n,m,s_x,s_y,d;
         cin>>n>>m>>s_x>>s_y>>d;
 
-        bool x_test = x_clear(n,m,s_x,s_y,d);
-        bool y_test = y_clear(n,m,s_x,s_y,d);
+        bool x_pass = x_clear(n,m,s_x,s_y,d);
+        bool y_pass = y_clear(n,m,s_x,s_y,d);
 
-        if(x_test && y_test)
+        if(x_pass && y_pass)
         {
             int step = m-1+n-1;
             cout<<step<<endl;
