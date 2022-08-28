@@ -7,11 +7,11 @@ bool x_clear(int n, int m, int s_x, int s_y, int d)
     // navigate x =1,2,3...,n at y == 1 && y == m
     int count=0;
     for (int i = 1; i <= n; i++)
-        if (abs(i-s_x) <= d && abs(1-s_y) <= d) 
+        if (abs(i-s_x) + abs(1-s_y) <= d) 
             {count++;break;}
 
     for (int i = 1; i <= n; i++)
-        if (abs(i-s_x) <= d && abs(m-s_y) <= d) 
+        if (abs(i-s_x) + abs(m-s_y) <= d) 
             {count++;break;}
 
     if (count == 2) return false;
@@ -23,11 +23,11 @@ bool y_clear(int n, int m, int s_x, int s_y, int d)
     // navigate y = 1,2,3,...,m at x == 1 && x = n
     int count=0;
     for (int i = 1; i <= m; i++)
-        if (abs(1-s_x) <= d && abs(i-s_y) <= d) 
+        if (abs(1-s_x) + abs(i-s_y) <= d) 
             {count++;break;}
 
     for (int i = 1; i <= m; i++)
-        if (abs(n-s_x) <= d && abs(i-s_y) <= d) 
+        if (abs(n-s_x) + abs(i-s_y) <= d) 
             {count++;break;}
 
     if (count == 2) return false;
