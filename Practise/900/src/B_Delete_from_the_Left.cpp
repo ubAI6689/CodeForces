@@ -2,7 +2,7 @@
 #include <string>
 int main()
 {
-    std::string s,t;
+    std::string s, t;
     std::cin >> s; int s_len = s.length();
     std::cin >> t; int t_len = t.length();
 
