@@ -1,8 +1,13 @@
 # ignore 800/bin folder
-800/bin
-900/src/.cph
+Practise/800/bin
+Practise/900/src/.cph
+Practise/900/src/.vscode
 # ignore Run folder
 Run
 
 # ignore bash script folder
 Bash_script
+
+#ignore .cph and .vscode
+Competition/Div2/20220827/.cph
+Competition/Div2/20220827/.vscode
