@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+
 int main()
 {
     int t; std::cin>>t;
@@ -19,10 +20,10 @@ int main()
             }
         }
 
+        int index = 0;
         std::set<std::string>::iterator it;
         for (it = d.begin(); it!=d.end();++it)
         {   
-            int index = 0;
             int count = 0;
             for (int i = 0; i < 3; i++)
             {
@@ -30,17 +31,16 @@ int main()
                 {
                     if (s[i][j] == *it)
                     {
-                        if (i == 0)      {point[i]++; count++; index = i;}
+                             if (i == 0) {point[i]++; count++; index = i;}
                         else if (i == 1) {point[i]++; count++; index = i;}
                         else if (i == 2) {point[i]++; count++; index = i;}
                     }
                 }
             }
-            if (count == 3) {for (int i = 0; i < 3; i++) point[i]--;}
+            if (count == 3) {point[0]--; point[1]--; point[2]--;}
             if (count == 1) {point[index]+=2;}
         }
-        for (int i = 0; i < 3; i++) std::cout<<point[i]<<' ';
-        std::cout<<'\n';
+        std::cout<<point[0]<<' '<<point[1]<<' '<<point[2]<<std::endl;
     }
     return 0;
 }
