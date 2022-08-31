@@ -20,7 +20,7 @@ int main()
     for (int i = 0; i < n-1; i++)
     {
         std::string temp = s.substr(i,2);
-        int c =  two_gram[temp];
+        int c = two_gram[temp];
         v.push_back(c);
     }
 
