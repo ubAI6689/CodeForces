@@ -1,34 +1,40 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <algorithm>
 typedef long long ll;
 
-void calculateSum(std::string s, int n)
+void solve()
 {
-    ll sum = 0;
+    int n; std::cin>>n;
+    std::string s; std::cin>> s;
+    ll total = 0;
+    std::vector<ll> v;
+    for (int i=0; i < n; i++)
+    {
+        if (s[i] == 'L')
+        {
+            v.push_back((n - 1 - i) - i);
+            total += i;
+        }
+        else
+        {
+            v.push_back(i - (n - 1 - i));
+            total += n - 1 - i;
+        }
+    }
+    sort(v.begin(), v.end(), std::greater<int>());
     for (int i = 0; i < n; i++)
     {
-        if (s[i] == 'L') sum+=i;
-        if (s[i] == 'R') sum+=n-(i+1);
+        if (v[i] > 0) {total += v[i];}
+        std::cout<< total << ' ';
     }
-    std::cout << sum << ' ';
-
+    std::cout<<'\n';
 }
 
 int main()
 {
     int t; std::cin>>t;
-    while(t--)
-    {
-        int n; std::cin>>n;
-        std::string s; std::cin>>s;
-
-        for(int i = 0; i<n;i++)
-        {
-            if (s[i] == 'R') s[i] = 'L';
-            else if (s[i] == 'L') s[i] = 'R';
-            calculateSum(s, n);
-        }
-        std::cout<<'\n';
-    }
+    while(t--) solve();
     return 0;
 }
