@@ -9,7 +9,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         s[i] == 'R' ? array[0]++ : array[1]++;
-        if (array[0] == array[1] && (s[i] == s[i+1])) pay++;
+        if (array[0] == array[1] && s[i] == s[i+1]) pay++;
     }
     std::cout<<pay;
     return 0;
