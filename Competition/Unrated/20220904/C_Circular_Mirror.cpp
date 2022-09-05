@@ -9,5 +9,7 @@ int main()
     {
         std::cin>>array[i];
     }
+
+    
     return 0;
 }
