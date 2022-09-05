@@ -11,23 +11,20 @@ int main()
     for (int i = 0, x; i < N && std::cin>>x; i++) player.push_back(x);
     sort(player.begin(), player.end(), std::greater<ll>());
 
-    int count = 0;
     ll power = 0;
-    int t = player.size();
+    int count = 0;
     int i = 0;
-    while(t > 0)
+    while(N > 0)
     {
         power += player[i];
-        t--;
+        N--;
         if (power > D)
         {
             count++;
             power = 0;
-            t-2;
             i++;
         }
     }
-    
     std::cout<<count;
     return 0;
 }
