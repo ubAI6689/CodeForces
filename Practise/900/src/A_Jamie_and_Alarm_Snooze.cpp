@@ -2,7 +2,7 @@
 
 bool isLucky(int hh, int mm)
 {
-    if (hh%10 == 7 || (hh/10)%10 == 7 || mm%10==7 || (mm/10)%10==7)
+    if (hh%10==7 || (hh/10)%10==7 || mm%10==7 || (mm/10)%10==7)
         return true;
     else return false;
 }
