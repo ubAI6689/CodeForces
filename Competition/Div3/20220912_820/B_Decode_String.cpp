@@ -14,8 +14,7 @@ int main()
         {
             if (code[i+2]=='0' && code[i+3]=='0')
             {
-                std::string sub1 = code.substr(i,1);
-                int ia = std::stoi(sub1);
+                int ia = code[i]-'0';
                 v.push_back(ia);
                 continue;
             }
