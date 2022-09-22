@@ -18,6 +18,7 @@ int main()
         if (b[c[i]]-f>=0) cout<<b[c[i]]-f<<' ';
         if (f<b[c[i]]) f=b[c[i]];
     }
+    return 0;
 } 
 
 // #include <iostream>
