@@ -13,12 +13,6 @@ int main()
         int cnt=0;
         for (int i = 0; i < n/2; i++)
         {
-            if ((s[i]=='a' && s[n-1-i]=='a') || (s[i]=='z' && s[n-1-i]=='z'))
-            {
-                cnt++;
-                continue;
-            }
-
             if ((s[i] == s[n-1-i])||
             (s[i]+1 == s[n-1-i]-1)||
             (s[i]-1 == s[n-1-i]+1))
