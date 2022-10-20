@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <numeric>      // iota
 #include <algorithm>    // sort, stable_sort
 
 using namespace std;
@@ -11,12 +10,13 @@ int main()
     int T;cin>>T;
     while(T--)
     {
+        ll ans=0;
         int n; cin>>n;
-        vector<ll> health(n), magic(n);
+        vector<ll> magic(n);
         for (int i=0; i<n; i++)
         {
             ll x; cin>>x;
-            health[i]=x;
+            ans+=x;
         }
         for (int i=0; i<n; i++)
         {
@@ -25,9 +25,6 @@ int main()
         }
 
         sort(magic.begin(), magic.end());
-        ll ans=0;
-        for (auto it:health)
-            ans+=it;
         for (int i=0; i<magic.size()-1;i++)
             ans+=magic[i];
         
