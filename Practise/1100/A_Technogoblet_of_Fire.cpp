@@ -18,32 +18,23 @@ int main()
 
     map<int, vector<int>> chosen_one;
     for (int i=0, x; i<k&&cin>>x; i++)
-    {
         chosen_one[school_id[x-1]].push_back(power[x-1]);
-    }
 
     map<int, vector<int>> vmap;
     for (int i=0; i<n; i++)
-    {
         vmap[school_id[i]].push_back(power[i]);
-    }
     
     map<int, vector<int>>::iterator it;
     for (it = vmap.begin(); it !=vmap.end();it++)
-    {
         sort(it->second.begin(), it->second.end(), greater<int>());
-    }
 
     int cnt=0;
-    
     for (it = chosen_one.begin(); it != chosen_one.end(); it++)
     {
         for (int i=0; i<it->second.size(); i++)
         {
-            auto finder = find(vmap[it->first].begin(), vmap[it->first].end(), it->second[i]);
-            cnt = cnt + (finder-vmap[it->first].begin());
-            // cout<<it->first<<": " << it->second[i] <<"\n";
-            // cout<<"cnt: "<<cnt<<"\n";
+            if (it->second[i] < vmap[it->first][0])
+                cnt++;
         }
     }
 
