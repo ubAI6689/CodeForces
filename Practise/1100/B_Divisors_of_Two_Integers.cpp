@@ -15,16 +15,16 @@ int main()
     {
         if (v[0]==v[i])
         {
-            std::cout<<v[i]<<'\n';
+            std::cout<<v[i];
             return 0;
         }
 
         if (v[0]%v[i]!=0)
         {
-            std::cout<<v[i]<<'\n';
+            std::cout<<v[i];
             return 0;
         }
-        else if (v[0]%v[i]==0)
+        else
         {
             if (v[i+1]==v[i])
             {
