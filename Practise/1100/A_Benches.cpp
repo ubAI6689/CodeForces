@@ -12,10 +12,11 @@ int main()
         // number of people sitting on each bench initially
         std::cin>>a[i];
     }
-    // distribute m people among the benches 1 by 1 to get minimum maximum
     // sort the array a in ascending order
     std::sort(a, a+n);
-    int max = a[n-1]+m ; // maximum number of people sitting on a bench
+    
+    // maximum number of people sitting on a bench
+    int max = a[n-1]+m ; 
 
     // distribute m people among the benches 1 by 1 to get smallest maximum
     for (int i = 0; i < m; i++)
