@@ -10,12 +10,17 @@ int main()
     // get a and b where a+b=n and sum of digits of a and b is maximum
 
     long long m = 0; // m is the number of digits in n
-	long long x = n; // x is a copy of n
-	while(n)
-    { // while n is not zero
-		n /= 10; // divide n by 10
-		m++; // increment m
-	}
+	
+    // long long x = n; // x is a copy of n
+	// while(n)
+    // { // while n is not zero
+	// 	n /= 10; // divide n by 10
+	// 	m++; // increment m
+	// }
+
+    // m equal to length of n
+    m = std::to_string(n).length();
+
 	m--; // m is now the number of digits in n minus 1
 	long long i = 0;
 	while(m--) // while m is not zero
@@ -24,7 +29,7 @@ int main()
 		i += 9; // add 9 to i
 	}
     a = i; // a is the largest number with m digits
-    b = x - i; // b is the remainder of n and a
+    b = n - i; // b is the remainder of n and a
     
     // sum every digit of a and b
     long long sum = 0;
