@@ -25,15 +25,15 @@ int main()
         // get substrings number
         int substrings_number = n * (n + 1) / 2;
         
-        // single substring counter
-        int single_counter = 0;
-        // iterate over all substrings
-        for (int i = 0; i < substrings_number; i++)
+        // get substrings with length 100 and below
+        for (int i = 0; i < n; i++)
         {
-            for (int j = i; j < n; j++)
+            for (int j = 1; j <= 100; j++)
             {
-                // add substring to vector
-                substrings.push_back(s.substr(i, j - i + 1));
+                if (i + j <= n)
+                {
+                    substrings.push_back(s.substr(i, j));
+                }
             }
         }
 

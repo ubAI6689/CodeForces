@@ -2,14 +2,34 @@
 # // doesn't exceed the number of distinct characters in it.
 
 # // write a program to find the number of diverse substrings of a given string.
+# only take into account of substring with length <= 100
 
 # read input for test cases
 T = int(input())
 
-# write a function to get all substrings of a string
+# function to get substring with length <= 100
 def get_substrings(string):
+    # get length of string
     length = len(string)
-    return [string[i:j+1] for i in range(length) for j in range(i,length)]
+    # create a list to store all substring
+    substring_list = []
+    # loop through string
+    for i in range(length):
+        # loop through string again
+        for j in range(i, length):
+            # get substring
+            substring = string[i:j+1]
+            # check if length of substring <= 100
+            if len(substring) <= 100:
+                # append substring to list
+                substring_list.append(substring)
+    # return list
+    return substring_list
+
+# # write a function to get all substrings of a string
+# def get_substrings(string):
+#     length = len(string)
+#     return [string[i:j+1] for i in range(length) for j in range(i,length)]
 
 # write a function to check if a string is diverse
 def is_diverse(string):
