@@ -24,6 +24,8 @@ int main()
     {
         long long a, b;
         std::cin>>a>>b; // two numbers
+
+        // a^2 - b^2 = (a+b)(a-b) is prime if and only if a-b == 1 && a+b is prime
         std::cout<<((a-b==1 && isPrime(a+b))?"YES":"NO")<<std::endl;
     }
     return 0;
