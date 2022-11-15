@@ -30,14 +30,14 @@ int main()
             if (a[i][j]=='.')
             {
                 // check if the adjacent cells contain mines
-                if (i>0 && j>0 && a[i-1][j-1]=='*') valid=false; // check if the top left cell contains a mine
-                if (i>0 && a[i-1][j]=='*') valid=false; // check if the top cell contains a mine
-                if (i>0 && j<m-1 && a[i-1][j+1]=='*') valid=false; // check if the top right cell contains a mine
-                if (j>0 && a[i][j-1]=='*') valid=false; // check if the left cell contains a mine
-                if (j<m-1 && a[i][j+1]=='*') valid=false; // check if the right cell contains a mine
-                if (i<n-1 && j>0 && a[i+1][j-1]=='*') valid=false; // check if the bottom left cell contains a mine
-                if (i<n-1 && a[i+1][j]=='*') valid=false; // check if the bottom cell contains a mine
-                if (i<n-1 && j<m-1 && a[i+1][j+1]=='*') valid=false; // check if the bottom right cell contains a mine
+                if (i>0 && j>0 && a[i-1][j-1]=='*') {valid=false; break; }// check if the top left cell contains a mine
+                if (i>0 && a[i-1][j]=='*') {valid=false; break;} // check if the top cell contains a mine
+                if (i>0 && j<m-1 && a[i-1][j+1]=='*') {valid=false; break; }// check if the top right cell contains a mine
+                if (j>0 && a[i][j-1]=='*') {valid=false; break; }// check if the left cell contains a mine
+                if (j<m-1 && a[i][j+1]=='*') {valid=false; break; }// check if the right cell contains a mine
+                if (i<n-1 && j>0 && a[i+1][j-1]=='*') {valid=false; break; }// check if the bottom left cell contains a mine
+                if (i<n-1 && a[i+1][j]=='*') {valid=false; break; }// check if the bottom cell contains a mine
+                if (i<n-1 && j<m-1 && a[i+1][j+1]=='*') {valid=false; break; }// check if the bottom right cell contains a mine
             }
 
             // if current cell is number
@@ -52,7 +52,7 @@ int main()
                 if (i<n-1 && j>0 && a[i+1][j-1]=='*') count++; // check if the bottom left cell contains a mine
                 if (i<n-1 && a[i+1][j]=='*') count++; // check if the bottom cell contains a mine
                 if (i<n-1 && j<m-1 && a[i+1][j+1]=='*') count++; // check if the bottom right cell contains a mine
-                if (count!=a[i][j]-'0') valid=false; // if the number of mines in the adjacent cells is not equal to the number in the current cell, the board is invalid
+                if (count!=a[i][j]-'0') {valid=false; break; }// if the number of mines in the adjacent cells is not equal to the number in the current cell, the board is invalid
             }
         }
     }
