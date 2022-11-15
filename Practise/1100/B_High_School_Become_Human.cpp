@@ -3,22 +3,23 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// fucntion to calculate log base 10 
-
-double log10(long long x)
-{
-    return log(x)/log(10);
-}
-
 int main()
 {
     long long x,y;
     cin>>x>>y;
 
-    if (y * log10(x) > x * log10(y))
+    if (x==y)
+    {
+        cout<<"=";
+        return 0;
+    }
+
+    if (y * log(x) > x * log(y))
         cout<<">"<<endl;
-    else if (y * log10(x) < x * log10(y))
+    else if (y * log(x) < x * log(y))
         cout<<"<"<<endl;
     else
         cout<<"="<<endl;
+    
+    return 0;
 }
