@@ -5,7 +5,7 @@
 int main()
 {
     int hh, mm; std::cin>>hh>>mm; // time of Andrew waking up
-    int H, D, C, N; std::cin>>H>>D>>C>>N; // H = cat hunger point, D = hunger point increment per minute, C = price of bun, N = -hunger point of bun
+    int H, D, C, N; std::cin>>H>>D>>C>>N; // H = cat hunger point, D = hunger point increment per minute, C = price of bun, N = hunger point of bun
 
     // there is discount 20% discount for bun at 20:00
     // if andrew wake up before 20:00, determine if it's best to buy bun at 20:00 or not,  
