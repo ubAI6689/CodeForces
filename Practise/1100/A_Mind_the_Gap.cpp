@@ -14,7 +14,7 @@ int main()
         std::cin>>h[i]>>m[i];
     }
 
-    // if first scheduled - 2*s + 1 > 0 0; then place a landing before the first scheduled landing at 0 0
+    // if first scheduled - (s + 1) >= 0 0; then place a landing before the first scheduled landing at 0 0
     if (h[0]*60 + m[0] - (s + 1) >= 0)
     {
         std::cout<<0<<" "<<0;
