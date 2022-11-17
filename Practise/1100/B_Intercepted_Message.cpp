@@ -34,13 +34,8 @@ int main()
     // if the pointer reach the end of the message, move to the next message
     // repeat until the pointer reach the end of the last message
 
-    // get the first number of each message
     ll first_msg_pointer = 0, second_msg_pointer = 0;
-    ll first_msg_sum = first_msg[first_msg_pointer], second_msg_sum = second_msg[second_msg_pointer];
     ll block = 0;
-    // repeat until the pointer reach the end of the message
-    // if the pointer reach the end of the message, move to the next message
-    // repeat until the pointer reach the end of the last message
     while (first_msg_pointer < n && second_msg_pointer < m)
     {
         // if the first number is the same, block++, move the pointer to the next number
