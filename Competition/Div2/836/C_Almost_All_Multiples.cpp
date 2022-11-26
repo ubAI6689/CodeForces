@@ -25,7 +25,7 @@
 #include <iostream>
 using namespace std;
  
-int n, x, q, p, ni;
+int n, x, q, p;
  
 int main()
 {
