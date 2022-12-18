@@ -18,7 +18,7 @@ int main()
             if (a[0] < a[i])
             {
                 ll diff = a[i] - a[0];
-                if (diff < 10)
+                if (diff < 2)
                 {
                     a[0]++;
                     a[i]--;
